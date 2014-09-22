@@ -6,28 +6,32 @@ html(ng-app='SELab')
   body(ng-controller='PageController')
     #wrapper
       #header
-        #logo
-        | Software Engineering Lab
+        #logo Software Engineering Lab
         #navigater
           tr
             td
-              a 指導教授
+              a(href='#professor' du-smooth-scroll) 指導教授
             td
-              a 實驗室成員
+              a(href='#labmate' du-smooth-scroll) 實驗室成員
             td
-              a 研究計畫
+              a(href='#research' du-smooth-scroll) 研究計畫
             td
-              a 2014軟體工程實務課程
+              a(href='#se_course' du-smooth-scroll) 2014軟體工程實務課程
             td
-              a 開授課程
+              a(href='#open_course' du-smooth-scroll) 開授課程
             td
-              a 聯絡我們
+              a(href='#about_us' du-smooth-scroll) 聯絡我們
       #professor.page
       #labmate.page
       #research.page
       #se_course.page
       #open_course.page
-      #about_us.page
+      #about_us(ng-controller='AboutController as aboutCtrl').page
+        .about_info
+          .address Address: 台南市 東區 大學路1號 國立成功大學 成功校區 資訊系新館65912室
+
+
 
   script(src='./bower_components/angular/angular.min.js')
+  script(src='./bower_components/angular-scroll/angular-scroll.min.js')
   script(src='./scripts/main.js')
