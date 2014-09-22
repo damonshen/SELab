@@ -1,0 +1,33 @@
+doctype html
+html(ng-app='SELab')
+  head
+  link(rel='stylesheet', href='./styles/main.css')
+  link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
+  body(ng-controller='PageController')
+    #wrapper
+      #header
+        #logo
+        | Software Engineering Lab
+        #navigater
+          tr
+            td
+              a 指導教授
+            td
+              a 實驗室成員
+            td
+              a 研究計畫
+            td
+              a 2014軟體工程實務課程
+            td
+              a 開授課程
+            td
+              a 聯絡我們
+      #professor.page
+      #labmate.page
+      #research.page
+      #se_course.page
+      #open_course.page
+      #about_us.page
+
+  script(src='./bower_components/angular/angular.min.js')
+  script(src='./scripts/main.js')
