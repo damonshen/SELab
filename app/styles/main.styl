@@ -3,39 +3,61 @@
 
 html, body
   height: 100%
+  margin:0
   span(1)
   a
     text-decoration: none
 
+#test
+  background-color: red
 #wrapper
+  height: 100%
   font-family: 'Raleway', sans-serif
+  .title-text
+    color: #221f20 //dark black
+  .content-text
+    color: #888 //light black
   #header
-    height: 60px
+    height: 80px
     span(1)
     position: fixed
+    background-color: rgba(255, 255, 255, 0.95)
+    z-index:10
+    box-shadow: 0px 1px 10px #cccccc
     #logo
       center(960)
       text-align: center
       font-size: 40px
-      color: blue 
+      color: #1c8bb7 
     #navigater
       margin-top: 10px
       center(960)
       text-align: center
-      background-color: #ffffff
       a
-        color: #0a64a4
+        color: #221f20
         cursor: pointer
         margin: 5px
-        &:active
-          color: black
+        &:hover
+          color: #1c8bb7
   .page
-    height: 600px
+    height: 100%
     background-color: #f1f1f1
-    border-bottom: 2px solid
     .about_info
       font-size: 20px
       padding-top: 10%
       center(540px)
+  #labmates
+    background-color: #221f20
+    color: #1c8bb7
+    .mate-list
+      padding-top: 100px
+      center(960px)
+      .mate
+        col(1/4)
+        background-color: #f1f1f1
+        border: 1px solid #888
+        color: #1c8bb7
+  #se_course
+    background-color: #1c8bb7 //blue
 
 

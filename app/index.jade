@@ -1,8 +1,8 @@
 doctype html
 html(ng-app='SELab')
   head
-  link(rel='stylesheet', href='./styles/main.css')
-  link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
+    link(rel='stylesheet', href='./styles/main.css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
   body(ng-controller='PageController')
     #wrapper
       #header
@@ -12,7 +12,7 @@ html(ng-app='SELab')
             td
               a(href='#professor' du-smooth-scroll) 指導教授
             td
-              a(href='#labmate' du-smooth-scroll) 實驗室成員
+              a(href='#labmates' du-smooth-scroll) 實驗室成員
             td
               a(href='#research' du-smooth-scroll) 研究計畫
             td
@@ -22,13 +22,25 @@ html(ng-app='SELab')
             td
               a(href='#about_us' du-smooth-scroll) 聯絡我們
       #professor.page
-      #labmate.page
+      #labmates.page
+        .mate-list
+          .mate(ng-repeat='mate in labmates')
+            img
+            .mate-info Name: {{mate.name}}
       #research.page
       #se_course.page
       #open_course.page
       #about_us(ng-controller='AboutController as aboutCtrl').page
         .about_info
-          .address Address: 台南市 東區 大學路1號 國立成功大學 成功校區 資訊系新館65912室
+          .address.title-text
+            | Address:
+            .content-text {{about_info.address}}
+          .email.title-text
+            | Email:
+            .content-text {{about_info.email}}
+          .tel.title-text
+            | Tel:
+            .content-text {{about_info.tel}}
 
 
 
