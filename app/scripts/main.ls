@@ -1,5 +1,5 @@
-angular.module \SELab, ['duScroll']
-  .controller \PageController ($scope, $document)->
+angular.module \SELab, ['duScroll' \duParallax]
+  .controller \PageController ($scope, $document, parallaxHelper)->
     $scope.labmates =
       * name: \林孝融
         email: \123@test.com
@@ -7,6 +7,7 @@ angular.module \SELab, ['duScroll']
         email: \roraibar@gmail.com
       * name: \陳昱成
         email: \mooc0102@yahoo.com.tw
+    $scope.background = parallaxHelper.createAnimator -0.3
 
   .controller \AboutController ($scope)->
     $scope.about_info =

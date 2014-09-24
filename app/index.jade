@@ -2,6 +2,7 @@ doctype html
 html(ng-app='SELab')
   head
     link(rel='stylesheet', href='./styles/main.css')
+    link(rel='stylesheet', href='./bower_components/animate.css/animate.min.css')
     link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
   body(ng-controller='PageController')
     #wrapper
@@ -23,8 +24,8 @@ html(ng-app='SELab')
               a(href='#about_us' du-smooth-scroll) 聯絡我們
       #professor.page
       #labmates.page
-        .mate-list
-          .mate(ng-repeat='mate in labmates')
+        .mate-list(data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal")
+          .mate(ng-repeat='mate in labmates' )
             .mate-img
               img
             .mate-info 
@@ -35,7 +36,7 @@ html(ng-app='SELab')
       #se_course.page
       #open_course.page
       #about_us(ng-controller='AboutController as aboutCtrl').page
-        .about_info
+        .about_info(data-anijs="if: scroll, on: window, do: zoomIn animated, before: scrollReveal")
           .address.title-text
             | Address:
             .content-text {{about_info.address}}
@@ -50,4 +51,7 @@ html(ng-app='SELab')
 
   script(src='./bower_components/angular/angular.min.js')
   script(src='./bower_components/angular-scroll/angular-scroll.min.js')
+  script(src='./bower_components/ng-parallax/angular-parallax.min.js')
   script(src='./scripts/main.js')
+  script(src='./bower_components/anijs/dist/anijs-min.js')
+  script(src='./bower_components/anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js')
