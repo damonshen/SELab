@@ -17,11 +17,11 @@ html(ng-app='SELab')
             td
               a(href='#research' du-smooth-scroll) 研究計畫
             td
-              a(href='#se_course' du-smooth-scroll) 2014軟體工程實務課程
+              a(href='#se-courses' du-smooth-scroll) 2014軟體工程實務課程
             td
-              a(href='#open_course' du-smooth-scroll) 開授課程
+              a(href='#open-courses' du-smooth-scroll) 開授課程
             td
-              a(href='#about_us' du-smooth-scroll) 聯絡我們
+              a(href='#about-us' du-smooth-scroll) 聯絡我們
       #professor.page
       #labmates.page
         .mate-list(data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal")
@@ -33,12 +33,19 @@ html(ng-app='SELab')
               br
               | E-mail: {{mate.email}}
       #research.page
-      #se_course.page
-      #open_course.page
-      #about_us(ng-controller='AboutController as aboutCtrl').page
+      #se-courses.page
+      #open-courses.page
+        .courses-list
+          .course
+            .course-name Software Design
+          .course
+            .course-name Java Software Delelopment
+          .course
+            .course-name Software Engineering
+      #about-us(ng-controller='AboutController as aboutCtrl').page
         .about_info(data-anijs="if: scroll, on: window, do: zoomIn animated, before: scrollReveal")
           .address.title-text
-            | Address:
+            | Address: 
             .content-text {{about_info.address}}
           .email.title-text
             | Email:
