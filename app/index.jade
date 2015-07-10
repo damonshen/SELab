@@ -1,6 +1,7 @@
 doctype html
 html
   head
+    meta(http-equiv="Content-Type" content="text/html" charset="utf-8")
     link(rel='stylesheet', href='./styles/main.css')
     link(rel='stylesheet', href='./bower_components/animate.css/animate.min.css')
     link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
@@ -25,6 +26,7 @@ html
       #professor.page
       #labmates.page
         .mate-list(data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal")
+          .title Master
           .mate
             .mate-img
               img
@@ -32,6 +34,7 @@ html
               | Name: 林孝融
               br
               | E-mail: 123@test.com
+          .title Other
           .mate
             .mate-img
               img
@@ -70,9 +73,9 @@ html
 
 
 
+  script(src='./bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js')
   script(src='./bower_components/anijs/dist/anijs-min.js')
   script(src='./bower_components/anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js')
   script(src='./bower_components/skrollr/dist/skrollr.min.js')
   script(src='./bower_components/skrollr-menu/dist/skrollr.menu.min.js')
-  script(src='./bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js')
   script(src='./scripts/main.js')
