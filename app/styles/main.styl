@@ -1,5 +1,6 @@
 @import 'jeet'
 @import 'nib'
+@import '../bower_components/Hover/css/hover-min.css'
 
 light-blue = #1c8bb7 
 light-black = #454849
@@ -12,15 +13,6 @@ html, body
     text-decoration: none
 
 
-@keyframes navigate-frames {
-  from{
-    color: light-black
-  }
-  to{
-    color: light-blue
-    text-shadow: 0 3px 1px #cccccc
-  }
-}
 #wrapper
   height: 100%
   font-family: 'Raleway', sans-serif
@@ -29,7 +21,7 @@ html, body
   .content-text
     color: #888 //light black
   #header
-    height: 80px
+    height: 100px
     span(1)
     position: fixed
     background-color: rgba(255, 255, 255, 0.95)
@@ -45,11 +37,10 @@ html, body
       center(960)
       text-align: center
       a
+        padding: 5px
         color: #221f20
         cursor: pointer
         margin: 5px
-        &:hover
-          animation: navigate-frames 0.3s forwards
   .page
     height: 100%
     background-color: #f1f1f1

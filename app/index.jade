@@ -1,37 +1,51 @@
 doctype html
-html(ng-app='SELab')
+html
   head
     link(rel='stylesheet', href='./styles/main.css')
     link(rel='stylesheet', href='./bower_components/animate.css/animate.min.css')
     link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
-  body(ng-controller='PageController')
+  body
     #wrapper
       #header
         #logo Software Engineering Lab
         #navigater
           tr
             td
-              a(href='#professor' du-smooth-scroll) 指導教授
+              a.hvr-underline-from-center(href='#professor' du-smooth-scroll) 指導教授
             td
-              a(href='#labmates' du-smooth-scroll) 實驗室成員
+              a.hvr-underline-from-center(href='#labmates' du-smooth-scroll) 實驗室成員
             td
-              a(href='#research' du-smooth-scroll) 研究計畫
+              a.hvr-underline-from-center(href='#research' du-smooth-scroll) 研究計畫
             td
-              a(href='#se-courses' du-smooth-scroll) 2014軟體工程實務課程
+              a.hvr-underline-from-center(href='#se-courses' du-smooth-scroll) 2014軟體工程實務課程
             td
-              a(href='#open-courses' du-smooth-scroll) 開授課程
+              a.hvr-underline-from-center(href='#open-courses' du-smooth-scroll) 開授課程
             td
-              a(href='#about-us' du-smooth-scroll) 聯絡我們
+              a.hvr-underline-from-center(href='#about-us' du-smooth-scroll) 聯絡我們
       #professor.page
       #labmates.page
         .mate-list(data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal")
-          .mate(ng-repeat='mate in labmates' )
+          .mate
             .mate-img
               img
             .mate-info 
-              | Name: {{mate.name}}
+              | Name: 林孝融
               br
-              | E-mail: {{mate.email}}
+              | E-mail: 123@test.com
+          .mate
+            .mate-img
+              img
+            .mate-info 
+              | Name: 羅立翔
+              br
+              | E-mail: roraibar@gmail.com
+          .mate
+            .mate-img
+              img
+            .mate-info 
+              | Name: 陳昱成
+              br
+              | E-mail: mooc0102@yahoo.com.tw
       #research.page
       #se-courses.page
       #open-courses.page
@@ -42,23 +56,23 @@ html(ng-app='SELab')
             .course-name Java Software Delelopment
           .course
             .course-name Software Engineering
-      #about-us(ng-controller='AboutController as aboutCtrl').page
+      #about-us.page
         .about_info(data-anijs="if: scroll, on: window, do: zoomIn animated, before: scrollReveal")
           .address.title-text
             | Address: 
-            .content-text {{about_info.address}}
+            .content-text 台南市 東區 大學路1號 國立成功大學 成功校區 資訊系新館65912室
           .email.title-text
             | Email:
-            .content-text {{about_info.email}}
+            .content-text selab@mail.csie.ncku.edu.tw
           .tel.title-text
             | Tel:
-            .content-text {{about_info.tel}}
+            .content-text 886-6-2757575　ext 62520　ext 2912
 
 
 
-  script(src='./bower_components/angular/angular.min.js')
-  script(src='./bower_components/angular-scroll/angular-scroll.min.js')
-  script(src='./bower_components/ng-parallax/angular-parallax.min.js')
-  script(src='./scripts/main.js')
   script(src='./bower_components/anijs/dist/anijs-min.js')
   script(src='./bower_components/anijs/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js')
+  script(src='./bower_components/skrollr/dist/skrollr.min.js')
+  script(src='./bower_components/skrollr-menu/dist/skrollr.menu.min.js')
+  script(src='./bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js')
+  script(src='./scripts/main.js')
