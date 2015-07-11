@@ -11,6 +11,8 @@ html, body
   span(1)
   a
     text-decoration: none
+    &:visited, &:link
+      color: inherit
 
 @-skrollr-keyframes page-frames
   bottom
@@ -47,8 +49,11 @@ html, body
         margin: 5px
   .page
     -skrollr-animation-name: page-frames
-    height: 100%
+    padding-top: 100px
     background-color: #f1f1f1
+    // let height fit the contain element
+    min-height: 100%
+    overflow:auto
     .about_info
       font-size: 20px
       padding-top: 10%
@@ -59,28 +64,51 @@ html, body
     .title
       font-size: 30px
       color: #f1f1f1
-    .mate-list
-      padding-top: 200px
+    .mates-list
       center(960px)
-      .mate
-        col(1/3)
-        height: 240px
-        border-radius: 5px
-        background-color: #f1f1f1
-        .mate-img
-          span(1)
-          height: 140px
-          background-color: light-black
-          border-radius: 3px 3px 0px 0px
-        .mate-info
-          padding-top: 160px
-          padding-left: 20px
+      margin-top: 30px
+      .mates
+        col(1)
+        margin-bottom: 100px
+        .mate
+          col(1/3)
+          height: 240px
+          border-radius: 5px
+          background-color: #f1f1f1
+          .mate-img
+            span(1)
+            height: 140px
+            background-color: light-black
+            border-radius: 3px 3px 0px 0px
+          .mate-info
+            padding-top: 160px
+            padding-left: 20px
   #se-courses
     background-color: light-blue //blue
   #open-courses
     .courses-list
-      col(1)
-      padding-top: 100px
+      center(960px)
+      margin-top: 30px
       .course
         col(1/3)
-        background-color: light-blue
+        border-radius: 3px
+        font-size: 20px
+        text-align: center
+        .course-name
+          border-radius: 3px 3px 0px 0px
+          height: 100px
+          line-height: 100px
+          background-color: light-blue
+        .open-year
+          col(1)
+          background-color: white
+          height: 50px
+          line-height: 50px
+  #about-us
+    .about-contain
+      center(1280px)
+      .about-info
+        col(1/3)
+      .map
+        col(2/3)
+

@@ -2,6 +2,7 @@ doctype html
 html
   head
     meta(http-equiv="Content-Type" content="text/html" charset="utf-8")
+    link(rel='stylesheet', href='./bower_components/normalize.css/normalize.css')
     link(rel='stylesheet', href='./styles/main.css')
     link(rel='stylesheet', href='./bower_components/animate.css/animate.min.css')
     link(href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
@@ -25,51 +26,58 @@ html
               a.hvr-underline-from-center(href='#about-us' du-smooth-scroll) 聯絡我們
       #professor.page
       #labmates.page
-        .mate-list(data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal")
-          .title Master
-          .mate
-            .mate-img
-              img
-            .mate-info 
-              | Name: 林孝融
-              br
-              | E-mail: 123@test.com
-          .title Other
-          .mate
-            .mate-img
-              img
-            .mate-info 
-              | Name: 羅立翔
-              br
-              | E-mail: roraibar@gmail.com
-          .mate
-            .mate-img
-              img
-            .mate-info 
-              | Name: 陳昱成
-              br
-              | E-mail: mooc0102@yahoo.com.tw
+        .mates-list
+          .mates
+            .title Master
+            .mate
+              .mate-img
+                img
+              .mate-info 
+                | Name: 林孝融
+                br
+                | E-mail: 123@test.com
+          .mates
+            .mate
+              .mate-img
+                img
+              .mate-info 
+                | Name: 羅立翔
+                br
+                | E-mail: roraibar@gmail.com
+            .mate
+              .mate-img
+                img
+              .mate-info 
+                | Name: 陳昱成
+                br
+                | E-mail: mooc0102@yahoo.com.tw
       #research.page
       #se-courses.page
       #open-courses.page
         .courses-list
           .course
             .course-name Software Design
+            a.open-year.hvr-pop(target='_blank' href='http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0102&sem=1&co_no=P76F500') 2013 Fall
+            a.open-year.hvr-pop(target='_blank' href='http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0103&sem=1&co_no=P76F500') 2014 Fall
           .course
             .course-name Java Software Delelopment
+            a.open-year.hvr-pop(target='_blank' href='http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0102&sem=2&co_no=F722700') 2014 Spring
           .course
             .course-name Software Engineering
+            a.open-year.hvr-pop(target='_blank' href='http://class-qry.acad.ncku.edu.tw/syllabus/syllabus.php?syear=0101&sem=2&co_no=F731700') 2013 Spring
       #about-us.page
-        .about_info(data-anijs="if: scroll, on: window, do: zoomIn animated, before: scrollReveal")
-          .address.title-text
-            | Address: 
-            .content-text 台南市 東區 大學路1號 國立成功大學 成功校區 資訊系新館65912室
-          .email.title-text
-            | Email:
-            .content-text selab@mail.csie.ncku.edu.tw
-          .tel.title-text
-            | Tel:
-            .content-text 886-6-2757575　ext 62520　ext 2912
+        .about-contain
+          img.map(src='http://140.116.154.120/home/images/map_full.jpg')
+          .about-info
+            .address.title-text
+              | Address: 
+              .content-text 台南市 東區 大學路1號 國立成功大學 成功校區 資訊系新館65912室
+            .email.title-text
+              | Email:
+              .content-text selab@mail.csie.ncku.edu.tw
+            .tel.title-text
+              | Tel:
+              .content-text 886-6-2757575　ext 62520　ext 2912
 
 
 
