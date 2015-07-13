@@ -15,8 +15,10 @@ html, body
       color: inherit
 
 @-skrollr-keyframes page-frames
-  bottom
+  0
     transform: translateX(100px)
+  1000
+    transform: translateX(200px)
   
 
 #wrapper
@@ -90,8 +92,15 @@ html, body
       text-align: center
       margin-top: 50px
       tr
+        &:first-child
+          border-width: 0px 0px 3px 0px
+          border-style: double
+          border-color: light-blue
         td
+          white-space: nowrap
           padding: 20px
+          &:first-child
+            width: 100%
   #se-courses
     background-color: light-blue //blue
   #open-courses
@@ -120,6 +129,7 @@ html, body
     .about-contain
       center(1280px)
       .about-info
+        padding-top: 30px
         col(1/3)
       .map
         col(2/3)
